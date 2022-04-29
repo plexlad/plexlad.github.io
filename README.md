@@ -1,4 +1,4 @@
-### hi there 👋, I'm Broderick Smith
+### hi there 👋, I'm Brock
 an aspiring student that is pursuing a degree in Software Engineering
 
  - I have been programming for almost 10 years
