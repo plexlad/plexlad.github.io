@@ -1,4 +1,3 @@
-### hi there, I'm indicore
 an aspiring student that is pursuing a degree in Software Engineering
 
  - I have been programming for almost 10 years
