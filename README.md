@@ -1,11 +1,20 @@
-an aspiring student that is pursuing a degree in Software Engineering
+## Looking to get into open source!
 
- - I have been programming for almost 10 years
- - believe in internet privacy and the power of P2P and decentralization
- - love open source
+Enjoys making things! (Keyboards, 3D printing, etc.).
+Love programming, though want to get more experienced.
 
-currently working on [Carothar 5e](https://github.com/toastielad/Carothar-5e), an open source D&D Node.js framework
+### Experienced in:
+ * Javascript
+ * Python
+ * Linux
+ * Work with software
+ * Work with repairing hardware
 
-personal favorite languages are JavaScript and Python
+### Knows some (and wants to work more with):
+ * Lua
+ * C++
 
-want to contribute to open source projects
+### Current projects:
+ * Learning C++
+ * Carothar 5e, a modular framework for programming tools for D&D 5e
+ * Decentralized applications
