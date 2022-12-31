@@ -31,8 +31,20 @@ body {
 	transition: 0.3s;
 }
 
-#sidenav a:hover {
-	color: #f1f1f1;
+#sidenav .home:hover {
+	color: #e06c75;
+}
+
+#sidenav .blog:hover {
+	color: #98c379
+}
+
+#sidenav .whoami:hover {
+	color: #61afef;
+}
+
+#sidenav .contact:hover {
+	color: #c678dd;
 }
 
 #main {
@@ -53,10 +65,6 @@ body {
 	display: inline-block;
 	cursor: pointer;
 	transition: 0.3s;
-}
-
-.home {
-	color: #E06C75;
 }
 
 #menu:hover .bar1 {
