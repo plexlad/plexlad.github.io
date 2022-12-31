@@ -10,6 +10,7 @@ body {
 
 #sidenav {
 	font-family: "Panton BlackCaps";
+	transform: translate(10px, 0);
 	height: 100%;
 	width: 0;
 	position: fixed;
@@ -29,6 +30,10 @@ body {
 	color: #ABB2BF;
 	display: block;
 	transition: 0.3s;
+}
+
+#sidenav a:hover {
+	transform: translateX(10px);
 }
 
 #sidenav .home:hover {
