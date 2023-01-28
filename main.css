@@ -1,0 +1,164 @@
+/* VARIABLES */
+
+:root {
+	--background1: #282C34;
+	--background2: #313640;
+	--foreground1: #ABB2BF;
+	--foreground2: #A1A7B3;
+	--foreground3: #959BA6;
+	--red: #E06C75;
+	--green: #98C379;
+	--yellow: #E5C07B;
+	--blue: #61AFEF;
+	--purple: #C678DD;
+	--cyan: #56B6C2;
+}
+
+/* FONTS */
+
+@font-face {
+	font-family: "Panton-BlackCaps";
+	src: url("./fonts/Panton-BlackCaps.otf");
+}
+
+@font-face {
+	font-family: "Panton-LightCaps";
+	src: url("./fonts/Panton-LightCaps.otf");
+}
+
+@font-face {
+	font-family: "FiraCode-Medium";
+	src: url("./fonts/FiraCode-Medium.ttf");
+}
+
+@font-face {
+	font-family: "FiraCode-Light";
+	src: url("./fonts/FiraCode-Light.ttf");
+}
+
+/* MAIN-CONTENT */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--background1);
+	min-height: 100vh;
+}
+
+/* HOME PAGE CONTENT */
+
+.content {
+	display: block;
+	margin: 0;
+	max-width: 600px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding-bottom: 2.5rem;
+}
+
+.content h1 {
+	font-family: "Panton-BlackCaps";
+	font-size: 50px;
+	color: var(--foreground1);
+	margin: 0;
+}
+
+.content h2 {
+	color: var(--foreground1);
+	font-family: "FiraCode-Medium";
+	font-size: 18px;
+	margin: 0;
+	margin-bottom: 17px;
+}
+
+.content p, .content ul {
+	color: var(--foreground3);
+	font-family: "FiraCode-Light";
+	font-size: 16px;
+	margin: 0;
+}
+
+.content h3 {
+	color: var(--foreground2);
+	font-family: "FiraCode-Light";
+	font-size: 17px;
+	margin-top: 17px;
+	margin-bottom: 5px;
+}
+
+.content ul li, footer ul li {
+	list-style-type: none;
+	display: inline;
+}
+
+.content ul li::after, footer ul li::after {
+	content: " - ";
+}
+
+.content ul li.last::after, footer ul li.last::after {
+	content: "";
+}
+
+.links {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.links ul li a, footer ul li a {
+	font-family: "FiraCode-Medium";
+	font-weight: bold;
+	color: var(--foreground1);
+	text-decoration: none;
+	transition-duration: 300ms;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: var(--background2);
+	color: var(--foreground3);
+	bottom: 0;
+	position: absolute;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+	font-family: "FiraCode-Medium";
+	font-size: 14px;
+	text-align: center;
+	width: 100%;
+}
+
+footer ul li a {
+	text-decoration: underline;
+}
+
+/* ADDITIONAL CLASSES */
+
+.fade-blue:hover {
+	color: var(--blue);
+}
+
+.fade-green:hover {
+	color: var(--green);
+}
+
+.fade-red:hover {
+	color: var(--red);
+}
+
+.fade-yellow:hover {
+	color: var(--yellow);
+}
+
+.fade-purple:hover {
+	color: var(--purple);
+}
+
+.fade-cyan:hover {
+	color: var(--cyan);
+}
