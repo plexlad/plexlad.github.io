@@ -70,14 +70,11 @@ input[type="checkbox"] {
 .menu-btn {
 	position: absolute;
 	z-index: 3;
-	left: 30px;
-	top: 30px;
-	left: 30px;
-	height: 45px;
-	width: 45px;
+	left: 5vh;
+	top: 5vh;
+	height: 7vh;
+	width: 7vh;
 	text-align: center;
-	line-height: 50px;
-	font-size: 20px;
 	cursor: pointer;
 	transition: all 0.3s ease-in-out;
 	text-align: center;
@@ -86,19 +83,19 @@ input[type="checkbox"] {
 .menu-btn span, .menu-btn:before, .menu-btn:after {
 	content: "";
 	position: absolute;
+	top: 2.5vh;
+	left: -0.05vh;
 	width: 100%;
-	top: 15px;
-	left: -1px;
-	border-bottom: 7px solid var(--foreground1);
+	border-bottom: 1.5vh solid var(--foreground1);
 	transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
 .menu-btn:before {
-	transform: translateY(-15px);
+	transform: translateY(-2.5vh);
 }
 
 .menu-btn:after {
-	transform: translateY(15px);
+	transform: translateY(2.5vh);
 }
 
 /* close animation */
