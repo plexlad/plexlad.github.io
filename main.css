@@ -47,7 +47,6 @@
 
 body {
 	background-color: var(--background1);
-	min-height: 100vh;
 }
 
 /* HOME PAGE */
@@ -58,7 +57,6 @@ body {
 }
 
 /* NAVBAR */
-
 input[type="checkbox"] {
 	display: none;
 }
@@ -155,7 +153,7 @@ nav {
 .content {
 	display: block;
 	margin: 0;
-	max-width: 600px;
+	max-width: 800px;
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -170,12 +168,17 @@ nav {
 	margin: 0;
 }
 
-.content h2 {
+.content h2, .content a h2 {
 	color: var(--foreground1);
 	font-family: "FiraCode-Medium";
 	font-size: 18px;
 	margin: 0;
 	margin-bottom: 17px;
+	text-decoration: none;
+}
+
+.content h2:first-child, .content a h2:first-child {
+	margin-bottom: 0;
 }
 
 .content p, .content ul {
@@ -193,16 +196,16 @@ nav {
 	margin-bottom: 5px;
 }
 
-.content ul li, footer ul li {
+.content ul.inline li, footer ul li {
 	list-style-type: none;
 	display: inline;
 }
 
-.content ul li::after, footer ul li::after {
+.content ul.inline li::after, footer ul li::after {
 	content: " - ";
 }
 
-.content ul li:last-child::after, footer ul li:last-child::after {
+.content ul.inline li:last-child::after, footer ul li:last-child::after {
 	content: "";
 }
 
@@ -211,12 +214,68 @@ nav {
 	margin-top: 40px;
 }
 
-.links ul li a, footer ul li a {
+.links ul li a, footer ul li a, ul.links li a {
 	font-family: "FiraCode-Medium";
 	font-weight: bold;
 	color: var(--foreground1);
 	text-decoration: none;
 	transition-duration: 300ms;
+}
+
+/* BLOG */
+
+ul#article-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul#article-list li {
+	height: 90px;
+	border: var(--foreground2) solid 5px;
+	border-radius: 10px;
+	font-size: 25px;
+	margin-bottom: 15px;
+	margin-top: 20px;
+	padding: 0;
+}
+
+ul#article-list li a {
+	display: block;
+	color: var(--foreground3);
+	height: 100%;
+	width: 100%;
+	transition: all 0.2s;
+}
+
+/* hover effects */
+ul#article-list li a:hover {
+	background-color: var(--foreground2);
+}
+
+ul#article-list li a:hover h4 {
+	color: var(--background3);
+}
+
+ul#article-list li a * {
+	padding: 10px;
+}
+
+ul#article-list li:last-child {
+	margin-bottom: 0;
+}
+
+ul#article-list li a h4 {
+	margin-right: 20px;
+	float: left;
+	font-family: "FiraCode-Medium";
+	font-weight: bold;
+}
+
+ul#article-list li a h5 {
+	color: var(--background3);
+	float: right;
+	font-size: 14px;
 }
 
 /* FOOTER */
@@ -225,7 +284,7 @@ footer {
 	background-color: var(--background2);
 	color: var(--foreground3);
 	bottom: 0;
-	position: absolute;
+	position: fixed;
 	padding-bottom: 1rem;
 	padding-top: 1rem;
 	font-family: "FiraCode-Medium";

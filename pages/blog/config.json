@@ -1,0 +1,23 @@
+[
+	{
+		"title": "The Beginner's Journey",
+		"date": "01/29/2023",
+		"tags": ["programming", "philosophy"],
+		"file": "beginners-journey",
+		"credits": "plexlad"
+	},
+	{
+		"title": "Example Article2",
+		"date": "01/29/2023",
+		"tags": ["programming"],
+		"file": "example-article2",
+		"credits": "plexlad"
+	},
+	{
+		"title": "Example Article",
+		"date": "01/29/2023",
+		"tags": ["example"],
+		"file": "example-article",
+		"credits": "plexlad"
+	}
+]
