@@ -231,7 +231,6 @@ ul#article-list {
 }
 
 ul#article-list li {
-	height: 90px;
 	border: var(--foreground2) solid 5px;
 	border-radius: 10px;
 	font-size: 25px;
@@ -246,6 +245,7 @@ ul#article-list li a {
 	height: 100%;
 	width: 100%;
 	transition: all 0.2s;
+	text-decoration: none;
 }
 
 /* hover effects */
@@ -266,16 +266,14 @@ ul#article-list li:last-child {
 }
 
 ul#article-list li a h4 {
-	margin-right: 20px;
-	float: left;
 	font-family: "FiraCode-Medium";
 	font-weight: bold;
 }
 
 ul#article-list li a h5 {
 	color: var(--background3);
-	float: right;
 	font-size: 14px;
+	padding-top: 0;
 }
 
 /* FOOTER */

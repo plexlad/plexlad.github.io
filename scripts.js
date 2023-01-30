@@ -1,5 +1,4 @@
 /* Import the HTML for the nav menu and footer! */
-
 window.onload = loadHTML;
 function loadHTML() { includeHTML('/default.html')}
 
@@ -79,8 +78,41 @@ function initCategory(category) {
 
 	var ulContent = '';
 	for (let i = 0; i < filteredArticles.length; i++) {
-		ulContent += `<li><a href="/pages/blog/${filteredArticles[0].file}.html"><h4>${filteredArticles[i].title}</h4><h5>${filteredArticles[i].credits}, </h5></a></li>`;
+		let time = parseTimeDifference(new Date(filteredArticles[i].time));
+		let title = filteredArticles[i].title;
+		let credits = filteredArticles[i].credits;
+		ulContent += `<li><a href="/pages/blog/${filteredArticles[0].file}.html"><h4>${title}</h4><h5>${credits}, ${time}</h5></a></li>`;
 	}
 
 	$("#article-list").html(ulContent);
+}
+
+/* TIME VALUES */
+// TODO: Make this code nicer?
+function parseTimeDifference(time) {
+	let timeValue = Date.now() - time.getTime();
+	let plural;
+	if (Math.abs(timeValue) > 3.154e+10) {
+		return returnTimeString(timeValue, 3.154e+10, ' year ago', ' years ago');
+	} else if (Math.abs(timeValue) > 2.628e+9) {
+		return returnTimeString(timeValue, 2.628e+9, ' month ago', ' months ago');
+	} else if (Math.abs(timeValue) > 6.048e+8) {
+		return returnTimeString(timeValue, 6.048e+8, ' week ago', ' weeks ago');
+	} else if (Math.abs(timeValue) > 8.64e+7) {
+		return returnTimeString(timeValue, 8.64e+7, ' day ago', ' days ago');
+	} else if (Math.abs(timeValue) > 3.6e+6) {
+		return returnTimeString(timeValue, 3.6e+6, ' hour ago', ' hours ago');
+	} else if (Math.abs(timeValue) > 60000) {
+		return returnTimeString(timeValue, 60000, ' minute ago', ' minutes ago');
+	} else {
+		return "just now";
+	}
+}
+
+function returnTimeString(time, num, string, pluralString) {
+	let roundingFunc;
+	if (time < 0) { roundingFunc = Math.ceil } else ( roundingFunc = Math.floor )
+
+	if (roundingFunc(time/num) > 1) { return `${roundingFunc(time/num)}${pluralString}` }
+	else { return `${roundingFunc(time/num)}${string}` }
 }
